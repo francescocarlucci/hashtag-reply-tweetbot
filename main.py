@@ -1,11 +1,5 @@
 import tweepy
 
-# TODO
-# 1. move credentials to a separate file / DONE
-# 2. git repo
-# 3. test comments / DONE
-# 4. blog about this shit
-
 def get_credentials():
 
     credentials = {}
@@ -50,7 +44,7 @@ def main():
 
             tweet_id = tweet.id
 
-            #session.update_status(status = '#andratuttobene :)', in_reply_to_status_id = tweet_id, auto_populate_reply_metadata=True)
+            session.update_status(status = '#andratuttobene :)', in_reply_to_status_id = tweet_id, auto_populate_reply_metadata=True)
 
             update_log([ tweet_id, tweet.user.name ])
 
