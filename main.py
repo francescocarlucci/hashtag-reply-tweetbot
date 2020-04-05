@@ -40,11 +40,11 @@ def main():
 
     try:
 
-        for tweet in session.search(q="coronavirus", lang="it", result_type="recent", count=1, since_id=int(since_id)):
+        for tweet in session.search(q="coronavirus", lang="it", result_type="popular", count=1, since_id=int(since_id)):
 
             tweet_id = tweet.id
 
-            session.update_status(status = '#andratuttobene :)', in_reply_to_status_id = tweet_id, auto_populate_reply_metadata=True)
+            session.update_status(status = '#andratuttobene 🙂❤️', in_reply_to_status_id = tweet_id, auto_populate_reply_metadata=True)
 
             update_log([ tweet_id, tweet.user.name ])
 
