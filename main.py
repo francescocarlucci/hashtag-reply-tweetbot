@@ -46,6 +46,8 @@ def main():
 
             session.update_status(status = '#andratuttobene 🙂❤️', in_reply_to_status_id = tweet_id, auto_populate_reply_metadata=True)
 
+            print(f"Yo! You felt a comment on: {tweet_id}")
+
             update_log([ tweet_id, tweet.user.name ])
 
         update_since_id(tweet_id)
