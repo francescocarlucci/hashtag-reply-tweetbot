@@ -63,14 +63,13 @@ def main():
 
     tweet_sent = False
 
-    # If the tweet has one of these, please skip
     stop_words = get_stopwords()
 
     if today == lastpost_date:
 
         print('You already tweeted today!')
 
-        #sys.exit(0)
+        sys.exit(0)
 
     try:
 
@@ -86,6 +85,7 @@ def main():
 
             has_stopwords = False
 
+            # If the tweet has one of these... skip!
             for stop_word in stop_words:
 
                 if stop_word.lower() in tweet_body.lower():
